@@ -1,0 +1,25 @@
+.header {
+    background-color: #4FA1C1;
+}
+
+.sider {
+    background-color: #4FA1C1;
+}
+
+.menu {
+    color: white;
+    background-color: #4FA1C1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: right;
+}
+
+.icon {
+    font-size: 40px;
+    color: #40a9ff;
+}
+
+.ant-dropdown-link {
+    color: #40a9ff;
+}
