@@ -9,100 +9,104 @@ const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
 class CustomLayout extends Component {
-  
-	state = {
-    	collapsed: true,
-  	};
 
+	state = {
+		collapsed: true
+	};
+	
 	onCollapse = collapsed => {
 		this.setState({ collapsed });
 	};
+  
 
-  	render() {
-		return (
-			<Layout 
-				style = {{ 
-					minHeight: '100vh' 
-				}}
-			>
-			<Sider 
-				collapsed = { this.state.collapsed } 
-				onCollapse = { this.onCollapse }
-				className = 'sider'
-			>
-				<div className = 'logo' />
-				<Menu
-					mode = 'inline'
-					className = 'menu'
-					defaultSelectedKeys = {['1']}
-				>	
-					<Menu.Item key = '1'>
-						
-					</Menu.Item>
-					<Menu.Item key = '1'>
-						
-					</Menu.Item>
-					<Menu.Item key = '2'>
-						<Icon type = 'pie-chart' />
-						<span> Option 1 </span>
-					</Menu.Item>
-					<Menu.Item key = '2'>
-						<Icon type="desktop" />
-						<span> Option 2 </span>
-					</Menu.Item>
-					<SubMenu
-						key = 'sub1'
-						title = {
-							<span>
-								<Icon type = 'user' />
-								<span> User </span>
-							</span>
-						}
-					>
-						<Menu.Item key = '3'> Tom </Menu.Item>
-						<Menu.Item key = '4'> Bill </Menu.Item>
-						<Menu.Item key = '5'> Alex </Menu.Item>
-					</SubMenu>
-					<SubMenu
-						key = 'sub2'
-						title={
-							<span>
-								<Icon type = 'team' />
-								<span> Team </span>
-							</span>
-						}
-					>
-						<Menu.Item key = '6'> Team 1 </Menu.Item>
-						<Menu.Item key = '8'> Team 2 </Menu.Item>
-					</SubMenu>
-					<Menu.Item key = '9'>
-						<Icon type = 'file' />
-						<span> File </span>
-					</Menu.Item>
-				</Menu>
-			</Sider>
-			<Layout>
-				<Header style={{ background: '#fff', padding: 0 }} />
-				<Content style = {{ 
-						margin: '24px 42px 0', 
-						overflow: 'initial' 
-					}}>
+			
+			
+		render() {
+			return (
+				<Layout style ={{ minHeight: '100vh' }}>
+					<Sider 
+						collapsed = { this.state.collapsed } 
+						onCollapse = { this.onCollapse } className = 'sider' >
+						<Menu 
+							defaultSelectedKeys ={['1']} 
+							className = 'menu' 
+						>
+							<Menu.Item key = '1'>
+								
+							</Menu.Item>
+							<Menu.Item key = '2'>
+								
+							</Menu.Item>
+							<Menu.Item key = '3'>
+								
+							</Menu.Item>
+							
+							<Menu.Item key = '4'>
+								<Icon type = 'desktop' className = 'iconMenu'/>
+							</Menu.Item>
 
-					<div 
-						style = {{ 
-							background: 'white', 
-							padding: 24, 
-							minHeight: 280	 
-						}}
-					>
-						{this.props.children}
-					</div>
-				</Content>
-					<Footer style={{ textAlign: 'center' }}>SEA Tecnologia ©2019 Criado por Victor Hugo Lopes Mota</Footer>
+							<Menu.Item key = '5'>
+								<Icon type = 'desktop' className = 'iconMenu'/>
+							</Menu.Item>
+						</Menu>
+					</Sider>
+					<Layout>
+						
+						<Content style = {{ margin: '0 20px' }} className = 'content'>
+							<div>
+								<Icon 
+									type = 'minus'
+									style = {{
+										position: 'absolute',
+										width: '1175px',
+										left: '22px',
+										top: '64px',
+										border: '5px solid #4FA1C1',
+										borderRadius: '20px'
+									}}
+								/>
+								<Icon 
+									type = 'desktop' 
+									className = 'iconItem' 
+									style = {{ 
+										fontSize: '40px',
+										color: '#FFFFFF',
+										position: 'absolute',
+										left: '22px',
+										right: '87.7px',
+										top: '42px',
+										paddingTop: '13px',
+										bottom: '90.8px',
+									}}
+								/>
+								<Icon 
+									type = 'desktop' 
+									className = 'iconItem' 
+									style = {{ 
+										fontSize: '40px',
+										color: '#FFFFFF',
+										position: 'absolute',
+										left: '160px',
+										right: '87.7px',
+										top: '42px',
+										paddingTop: '13px',
+										bottom: '90.8px',
+									}}
+								/>								
+							</div>
+						</Content>
+
+						<Content style = {{ margin: '0 35px' }} >
+						
+						<div style={{ padding: 24, background: '#fff', minHeight: 360, marginTop: 420 }}>Bill is a cat.</div>
+					</Content>
+						
+						
+						<Footer style={{ textAlign: 'center' }}>Sea Tecnologia ©2019 Victor Hugo Lopes Mota</Footer>
+					</Layout>
 				</Layout>
-			</Layout>
-		);	
-	}
+		);
+	}		
 }
 
 export default CustomLayout;
