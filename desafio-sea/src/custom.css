@@ -17,6 +17,22 @@
     top: 50px;
 }
 
+.text {
+
+    position: absolute;
+
+    margin-top: 26px;
+    margin-left: 23px;
+    margin-right: 6px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 122.2%;
+
+    color: #707070;
+}
+
 .iconMenu {
     
     color: #4FA1C1;
@@ -41,13 +57,41 @@
     border-radius: 20px;
 }
 
-.content {
+.contentUp {
 
     position: absolute;
-    width: 1218px;
+    width: 1242px;
     height: 159px;
     left: 90px;
     top: 33px;
+    margin-left: 33px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+}
+
+.contentLeft {
+
+    position: absolute;
+    width: 447px;
+    height: 484px;
+    left: 91px;
+    top: 225px;
+    margin-top: 33px;
+    margin-left: 35px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+}
+
+.userList {
+
+    position: absolute;
+    width: 759px;
+    height: 484px;
+    left: 573px;
+    top: 225px;
+    margin-left: 35px;
     background: #FFFFFF;
     box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
