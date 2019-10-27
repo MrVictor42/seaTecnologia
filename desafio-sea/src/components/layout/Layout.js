@@ -8,12 +8,11 @@ import retangule from '../svgs/retangule.svg';
 import miniRetangule from '../svgs/miniRetangule.svg';
 import miniminiRetangule from '../svgs/miniminiRetangule.svg';
 import userIcon from '../svgs/userIcon.svg';
-import vectorIcon from '../svgs/vector.svg';
 import UserList from '../user/UserList';
 import ContentLeft from '../content/ContentLeft';
+import ContentUp from '../content/ContentUp';
 
-const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
+const { Content, Sider } = Layout;
 
 class CustomLayout extends Component {
 
@@ -28,109 +27,57 @@ class CustomLayout extends Component {
 	render() {
 		return (
 			<Layout className = 'layout'>
-				<Sider 
-					collapsed = { this.state.collapsed } 
-					onCollapse = { this.onCollapse } className = 'sider' >
+				<Sider
+					className = 'sider'
+					width = '57px'
+				>
 						<Menu className = 'iconMenuUp'>
 			
-							<img src = { retangule } className = 'retanguleIconFirst' />
+							<img src = { retangule } className = 'retanguleIconFirst' alt = '' />
 							<Icon type = 'bank' className = 'iconMenuFirst'/>
-							<img src = { retangule } className = 'retanguleIconSecond' />
+							<img src = { retangule } className = 'retanguleIconSecond' alt = ''/>
 							<Icon type = 'edit' className = 'iconMenuSecond'/>
-							<img src = { miniRetangule } className = 'miniRetangule' />
-							<img src = { retangule } className = 'retanguleIconThird' />
+							<img src = { miniRetangule } className = 'miniRetangule' alt = ''/>
+							<img src = { retangule } className = 'retanguleIconThird' alt = ''/>
 							<Icon type = 'apartment' className = 'iconMenuThird'/>
-							<img src = { retangule } className = 'retanguleIconFourth' />
+							<img src = { retangule } className = 'retanguleIconFourth' alt = ''/>
 							<Icon type = 'bell' className = 'iconMenuFourth'/>
-							<img src = { miniminiRetangule } className = 'miniminiRetangule' />
+							<img src = { miniminiRetangule } className = 'miniminiRetangule' alt = ''/>
 							<Icon type = 'audit' className = 'iconMenuFiveth'/>
-							<img src = { retangule } className = 'retanguleIconFiveth' />
+							<img src = { retangule } className = 'retanguleIconFiveth' alt = ''/>
 							<Icon type = 'rollback' className = 'iconMenuSixth'/>
-							<img src = { retangule } className = 'retanguleIconSixth' />
+							<img src = { retangule } className = 'retanguleIconSixth' alt = ''/>
 							<Icon type = 'user' className = 'iconMenuSeventh'/>
 						</Menu>
-
-					{/* <Menu 
-						className = 'menu' 
-					> */}
-						
-						{/* <Menu.Item key = '2'>
-							
-						</Menu.Item>
-						<Menu.Item key = '3'>
-							
-						</Menu.Item>
-						
-						<Menu.Item key = '4'>
-							<Icon type = 'desktop' className = 'iconMenu'/>
-						</Menu.Item>
-
-						<Menu.Item key = '5'>
-							<Icon type = 'desktop' className = 'iconMenu'/>
-						</Menu.Item> */}
-					{/* </Menu> */}
 				</Sider>
-				{/* <Layout>
-					
+				<Layout>
 					<Content className = 'contentUp'>
-						<div>
-							<Icon 
-								type = 'minus'
-								style = {{
-									position: 'absolute',
-									width: '1175px',
-									left: '22px',
-									top: '64px',
-									border: '5px solid #4FA1C1',
-									borderRadius: '20px'
-								}}
-							/>
-							<Icon 
-								type = 'desktop' 
-								className = 'iconItem' 
-								style = {{ 
-									fontSize: '40px',
-									color: '#FFFFFF',
-									position: 'absolute',
-									left: '22px',
-									right: '87.7px',
-									top: '42px',
-									paddingTop: '13px',
-									bottom: '90.8px',
-								}}
-							/>
-							<Icon 
-								type = 'desktop' 
-								className = 'iconItem' 
-								style = {{ 
-									fontSize: '40px',
-									color: '#FFFFFF',
-									position: 'absolute',
-									left: '160px',
-									right: '87.7px',
-									top: '42px',
-									paddingTop: '13px',
-									bottom: '90.8px',
-								}}
-							/>								
-						</div>
+						<ContentUp/>
 					</Content>
 
 					<Content className = 'contentLeft'>
 						<ContentLeft/>
-						<img src = { userIcon } className = 'logo' />
+						<img src = { userIcon } className = 'logo' alt = ''/>
 					</Content>
 
 					<Content className = 'userList'>
-					<img src = { userIcon } className = 'logo' />
-						dadadsa
+						<UserList/>
+					</Content>
+
+					<Button className = 'next'>
+						Próximo Passo
+					</Button>
+
+					{/* <Content className = 'userList'> */}
+					{/* <img src = { userIcon } className = 'logo' /> */}
+						{/* dadadsa
 					</Content>
 					<Button 
 						className = 'button'
 						type = 'primary'
 					>
 						Próximo Passo
-					</Button>
+					</Button> */}
 					{/* <Content style = {{ margin: '0 35px' }} >
 					
 					<div style={{ padding: 24, background: '#fff', minHeight: 360, marginTop: 420 }}>Bill is a cat.</div>
@@ -138,7 +85,7 @@ class CustomLayout extends Component {
 					
 					
 					{/* <Footer style={{ textAlign: 'center' }}>Sea Tecnologia ©2019 Victor Hugo Lopes Mota</Footer> */}
-				{/* </Layout> */} */}
+				</Layout>
 			</Layout>
 		);
 	}		
