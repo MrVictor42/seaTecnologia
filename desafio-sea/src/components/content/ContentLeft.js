@@ -14,7 +14,7 @@ class ContentLeft extends Component {
                 nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, 
                 luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. 
                 Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus.
-            </div>
+            </div>          
         );
     }
 }

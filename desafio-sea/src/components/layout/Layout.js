@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Layout, Menu, Button, Icon } from 'antd';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import '../../custom.css';
+import retangule from '../svgs/retangule.svg';
+import miniRetangule from '../svgs/miniRetangule.svg';
+import miniminiRetangule from '../svgs/miniminiRetangule.svg';
+import userIcon from '../svgs/userIcon.svg';
+import vectorIcon from '../svgs/vector.svg';
 import UserList from '../user/UserList';
 import ContentLeft from '../content/ContentLeft';
 
@@ -22,18 +27,34 @@ class CustomLayout extends Component {
 			
 	render() {
 		return (
-			<Layout style ={{ minHeight: '480px' }}>
+			<Layout className = 'layout'>
 				<Sider 
 					collapsed = { this.state.collapsed } 
 					onCollapse = { this.onCollapse } className = 'sider' >
-					<Menu 
-						defaultSelectedKeys ={['1']} 
+						<Menu className = 'iconMenuUp'>
+			
+							<img src = { retangule } className = 'retanguleIconFirst' />
+							<Icon type = 'bank' className = 'iconMenuFirst'/>
+							<img src = { retangule } className = 'retanguleIconSecond' />
+							<Icon type = 'edit' className = 'iconMenuSecond'/>
+							<img src = { miniRetangule } className = 'miniRetangule' />
+							<img src = { retangule } className = 'retanguleIconThird' />
+							<Icon type = 'apartment' className = 'iconMenuThird'/>
+							<img src = { retangule } className = 'retanguleIconFourth' />
+							<Icon type = 'bell' className = 'iconMenuFourth'/>
+							<img src = { miniminiRetangule } className = 'miniminiRetangule' />
+							<Icon type = 'audit' className = 'iconMenuFiveth'/>
+							<img src = { retangule } className = 'retanguleIconFiveth' />
+							<Icon type = 'rollback' className = 'iconMenuSixth'/>
+							<img src = { retangule } className = 'retanguleIconSixth' />
+							<Icon type = 'user' className = 'iconMenuSeventh'/>
+						</Menu>
+
+					{/* <Menu 
 						className = 'menu' 
-					>
-						<Menu.Item key = '1'>
-							
-						</Menu.Item>
-						<Menu.Item key = '2'>
+					> */}
+						
+						{/* <Menu.Item key = '2'>
 							
 						</Menu.Item>
 						<Menu.Item key = '3'>
@@ -46,10 +67,10 @@ class CustomLayout extends Component {
 
 						<Menu.Item key = '5'>
 							<Icon type = 'desktop' className = 'iconMenu'/>
-						</Menu.Item>
-					</Menu>
+						</Menu.Item> */}
+					{/* </Menu> */}
 				</Sider>
-				<Layout>
+				{/* <Layout>
 					
 					<Content className = 'contentUp'>
 						<div>
@@ -97,11 +118,19 @@ class CustomLayout extends Component {
 
 					<Content className = 'contentLeft'>
 						<ContentLeft/>
+						<img src = { userIcon } className = 'logo' />
 					</Content>
 
 					<Content className = 'userList'>
+					<img src = { userIcon } className = 'logo' />
 						dadadsa
 					</Content>
+					<Button 
+						className = 'button'
+						type = 'primary'
+					>
+						Próximo Passo
+					</Button>
 					{/* <Content style = {{ margin: '0 35px' }} >
 					
 					<div style={{ padding: 24, background: '#fff', minHeight: 360, marginTop: 420 }}>Bill is a cat.</div>
@@ -109,7 +138,7 @@ class CustomLayout extends Component {
 					
 					
 					{/* <Footer style={{ textAlign: 'center' }}>Sea Tecnologia ©2019 Victor Hugo Lopes Mota</Footer> */}
-				</Layout>
+				{/* </Layout> */} */}
 			</Layout>
 		);
 	}		
