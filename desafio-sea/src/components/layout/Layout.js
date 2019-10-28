@@ -15,14 +15,6 @@ import ContentUp from '../content/ContentUp';
 const { Content, Sider } = Layout;
 
 class CustomLayout extends Component {
-
-	state = {
-		collapsed: true
-	};
-	
-	onCollapse = collapsed => {
-		this.setState({ collapsed });
-	};
 			
 	render() {
 		return (
@@ -60,31 +52,7 @@ class CustomLayout extends Component {
 						<img src = { userIcon } className = 'logo' alt = ''/>
 					</Content>
 
-					<Content className = 'userList'>
-						<UserList/>
-					</Content>
-
-					<Button className = 'next'>
-						Próximo Passo
-					</Button>
-
-					{/* <Content className = 'userList'> */}
-					{/* <img src = { userIcon } className = 'logo' /> */}
-						{/* dadadsa
-					</Content>
-					<Button 
-						className = 'button'
-						type = 'primary'
-					>
-						Próximo Passo
-					</Button> */}
-					{/* <Content style = {{ margin: '0 35px' }} >
-					
-					<div style={{ padding: 24, background: '#fff', minHeight: 360, marginTop: 420 }}>Bill is a cat.</div>
-				</Content> */}
-					
-					
-					{/* <Footer style={{ textAlign: 'center' }}>Sea Tecnologia ©2019 Victor Hugo Lopes Mota</Footer> */}
+					{ this.props.children }
 				</Layout>
 			</Layout>
 		);
