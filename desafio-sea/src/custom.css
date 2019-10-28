@@ -813,3 +813,144 @@
     box-sizing: border-box;
     border-radius: 10px;
 }
+
+.textEpi {
+
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3A3A3A;
+}
+
+.fieldEpi {
+
+    position: absolute;
+    left: 13px;
+    top: 46px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3A3A3A;
+}
+
+.activity {
+
+    position: absolute;
+    left: 13px;
+    right: 13px;
+    height: 159px;
+    top: 75px;
+    border: 1px solid #4FA1C1;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.buttonAddActivity {
+
+    position: absolute;
+    height: 36px;
+    width: 700px;
+    left: 13px;
+    right: 13px;
+    top: 244px;
+    bottom: 25.31%;
+    border: 1px solid #4FA1C1;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.textSelect {
+
+    position: absolute;
+    left: 11px;
+    top: 9px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4F4F4F;
+}
+
+.fieldSelect {
+
+    position: absolute;
+    top: 18px;
+    width: 676px;
+    height: 36px;
+    border: 1px solid #4FA1C1;
+    box-sizing: border-box;
+    border-radius: 10px;
+    top: 30px;
+
+}
+
+.textSelectEpi {
+
+    position: absolute;
+    left: 11px;
+    top: 84px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3A3A3A;
+}
+
+.textNumberCA {
+
+    position: absolute;
+    top: 84px;
+    left: 281px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3A3A3A;
+}
+
+.fieldSelectEPI {
+
+    position: absolute;
+    width: 260px;
+    height: 36px;
+    top: 26px;
+    background: #FFFFFF;
+    border: 1px solid #4FA1C1;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.fieldNumberCA {
+
+    position: absolute;
+    left:  281px;
+    top: 26px;
+    width: 260px;
+    height: 36px;
+    border: 1px solid #4FA1C1;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.textAddEpi {
+
+    position: absolute;
+    top: 119px;
+    left: 572px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3A3A3A;
+}

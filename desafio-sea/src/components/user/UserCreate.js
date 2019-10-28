@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Icon, Switch, Form, Input, Button, Radio, Select, Upload } from 'antd';
+import { Layout, Icon, Switch, Form, Input, Button, Radio, Select, Upload, Checkbox } from 'antd';
 
 const { Content } = Layout;
 const { Option } = Select;
@@ -15,6 +15,10 @@ class UserCreate extends Component {
             }
         });
     };
+
+    onChange(e) {
+        console.log(`checked = ${e.target.checked}`);
+    }
 
     render() {
 
@@ -171,7 +175,98 @@ class UserCreate extends Component {
                             </Form.Item>
                         </div>
                         <div className = 'fieldsDatas2'>
-
+                            <div className = 'textEpi'>
+                                Quais EPIs o trabalhador usa na atividade?
+                            </div>
+                            <Checkbox 
+                                onChange = { this.onChange }
+                                className = 'fieldEpi'
+                            > 
+                                    O trabalhador não usa EPI. 
+                            </Checkbox>
+                            <div className = 'activity'>
+                                <div className = 'textSelect'>
+                                    Selecione a atividade:
+                                    <Form.Item className = 'fieldSelect'>
+                                        {
+                                            getFieldDecorator('activity', {
+                                                rules: [
+                                                {
+                                                    type: 'date',
+                                                    message: 'Coloque a Data de Nascimento!',
+                                                },
+                                                {
+                                                    required: true,
+                                                    message: 'Coloque a Data de Nascimento!',
+                                                },
+                                                ],
+                                            })(
+                                                <Select defaultValue = '1'>
+                                                    <Option value = ''> </Option>
+                                                    <Option value = 'cargo1'> Cargo 1</Option>
+                                                    <Option value = 'cargo2'> Cargo 2 </Option>
+                                                </Select>
+                                            )
+                                        }
+                                    </Form.Item>
+                                </div>
+                                <div className = 'textSelectEpi'>
+                                    Selecione o EPI:
+                                    <Form.Item className = 'fieldSelectEPI'>
+                                        {
+                                            getFieldDecorator('selectEpi', {
+                                                rules: [
+                                                {
+                                                    type: 'date',
+                                                    message: 'Coloque a Data de Nascimento!',
+                                                },
+                                                {
+                                                    required: true,
+                                                    message: 'Coloque a Data de Nascimento!',
+                                                },
+                                                ],
+                                            })(
+                                                <Select defaultValue = '1'>
+                                                    <Option value = ''> </Option>
+                                                    <Option value = 'cargo1'> TO CERTO</Option>
+                                                    <Option value = 'cargo2'> Cargo 2 </Option>
+                                                </Select>
+                                            )
+                                        }
+                                    </Form.Item>
+                                </div>
+                                <div className = 'textNumberCA'>
+                                    Informe o número do CA:
+                                    <Form.Item className = 'fieldSelectEPI'>
+                                        {
+                                            getFieldDecorator('selectEpi', {
+                                                rules: [
+                                                {
+                                                    type: 'date',
+                                                    message: 'Coloque a Data de Nascimento!',
+                                                },
+                                                {
+                                                    required: true,
+                                                    message: 'Coloque a Data de Nascimento!',
+                                                },
+                                                ],
+                                            })(
+                                                <Select defaultValue = '1'>
+                                                    <Option value = ''> </Option>
+                                                    <Option value = 'cargo1'> TO CERTO</Option>
+                                                    <Option value = 'cargo2'> Cargo 2 </Option>
+                                                </Select>
+                                            )
+                                        }
+                                    </Form.Item>
+                                </div>
+                                <div className = 'textAddEpi'>
+                                    Adicionar EPI
+                                </div>
+                            </div>
+                            <Button className = 'buttonAddActivity'>
+                                Adicionar outra atividade
+                            </Button>
                         </div>
                         <div className = 'fieldsDatas3'>
                             <div className = 'textFile'>
