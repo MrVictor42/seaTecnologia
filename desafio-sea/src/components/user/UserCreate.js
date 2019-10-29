@@ -192,19 +192,19 @@ class UserCreate extends Component {
                                             getFieldDecorator('activity', {
                                                 rules: [
                                                 {
-                                                    type: 'date',
-                                                    message: 'Coloque a Data de Nascimento!',
+                                                    type: 'text',
+                                                    message: 'Selecione a Atividade!',
                                                 },
                                                 {
                                                     required: true,
-                                                    message: 'Coloque a Data de Nascimento!',
+                                                    message: 'Selecione a Atividade!',
                                                 },
                                                 ],
                                             })(
                                                 <Select defaultValue = '1'>
                                                     <Option value = ''> </Option>
-                                                    <Option value = 'cargo1'> Cargo 1</Option>
-                                                    <Option value = 'cargo2'> Cargo 2 </Option>
+                                                    <Option value = 'atividade1'> Atividade 1 </Option>
+                                                    <Option value = 'atividade2'> Atividade 2 </Option>
                                                 </Select>
                                             )
                                         }
@@ -217,12 +217,12 @@ class UserCreate extends Component {
                                             getFieldDecorator('selectEpi', {
                                                 rules: [
                                                 {
-                                                    type: 'date',
-                                                    message: 'Coloque a Data de Nascimento!',
+                                                    type: 'text',
+                                                    message: 'Selecione o EPI!',
                                                 },
                                                 {
                                                     required: true,
-                                                    message: 'Coloque a Data de Nascimento!',
+                                                    message: 'Selecione o EPI!',
                                                 },
                                                 ],
                                             })(
@@ -239,23 +239,19 @@ class UserCreate extends Component {
                                     Informe o número do CA:
                                     <Form.Item className = 'fieldSelectEPI'>
                                         {
-                                            getFieldDecorator('selectEpi', {
+                                            getFieldDecorator('numberCa', {
                                                 rules: [
                                                 {
-                                                    type: 'date',
-                                                    message: 'Coloque a Data de Nascimento!',
+                                                    type: 'text',
+                                                    message: 'Informe o Número do CA!',
                                                 },
                                                 {
                                                     required: true,
-                                                    message: 'Coloque a Data de Nascimento!',
+                                                    message: 'Informe o Número do CA!',
                                                 },
                                                 ],
                                             })(
-                                                <Select defaultValue = '1'>
-                                                    <Option value = ''> </Option>
-                                                    <Option value = 'cargo1'> TO CERTO</Option>
-                                                    <Option value = 'cargo2'> Cargo 2 </Option>
-                                                </Select>
+                                                <Input />
                                             )
                                         }
                                     </Form.Item>
