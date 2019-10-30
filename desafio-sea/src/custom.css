@@ -10,7 +10,7 @@
 
 .layout {
 
-    position: relative;
+    position: absolute;
     width: 1366px;
     height: 768px;
     background: linear-gradient(0deg, #F2F2F2, #F2F2F2);
@@ -439,6 +439,12 @@
     line-height: 16px;
     text-align: center;
     color: #4FA1C1;
+}
+
+.nextPhase {
+
+    top: 117px;
+    left: 20px;
 }
 
 .textContentUpFourth {

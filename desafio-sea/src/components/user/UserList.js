@@ -9,7 +9,7 @@ class UserList extends Component {
 
     state = {
         persons: [
-
+            
         ]
     };
 
@@ -22,8 +22,6 @@ class UserList extends Component {
     }
 
     render() {
-
-        const actives = this.state.persons.length;
         return (
             <Content className = 'userList'>
                 <div className = 'userListTop' >
@@ -50,9 +48,8 @@ class UserList extends Component {
                     >
                         Limpar Filtros
                     </Button>
-                    {/* { this.state.persons.map(person => <li>{person.name}</li>)} */}
                     <div className = 'actives'>
-                        Ativos { actives }/15
+                        Ativos 2/15
                     </div>
                     <div className = 'usersActives'>
                         <div className = 'nameUsersActives'>
@@ -102,7 +99,7 @@ class UserList extends Component {
                                 type = 'primary'
                                 className = 'officeUser'    
                             >
-                                Cargo 01
+                                Cargo 02
                             </Button>
                             <Button
                                 type = 'primary'
@@ -110,32 +107,16 @@ class UserList extends Component {
                             >
                                 ...
                             </Button>
-                            {/* 
-                            <Button
-                                type = 'primary'
-                                className = 'activeNumber1'    
-                            >
-                                Act 00
-                            </Button>
-                            <Button
-                                type = 'primary'
-                                className = 'officeUser1'    
-                            >
-                                Cargo 01
-                            </Button>
-                            <Button
-                                type = 'primary'
-                                className = 'optionsUser1'    
-                            >
-                                ...
-                            </Button> */}
                         </div>
                     </div>
                     <div className = 'switchText'>
                         A etapa está concluída?
                     </div>
                     <div className = 'switch'>
-                        <Switch checkedChildren = 'Sim' unCheckedChildren = 'Não' />
+                        <Switch
+                            checkedChildren = 'Sim' 
+                            unCheckedChildren = 'Não' 
+                        />
                     </div>
                 </div>
                 <Button className = 'next'>

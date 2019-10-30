@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Layout, Icon, Switch, Form, Input, Button, Radio, Select, Upload, Checkbox } from 'antd';
+import { Link } from 'react-router-dom';
 
 const { Content } = Layout;
 const { Option } = Select;
@@ -28,10 +29,12 @@ class UserCreate extends Component {
                 <Form onSubmit = { this.handleSubmit }>
                     
                     <div className = 'userAddTop'>
-                        <Icon
-                            className = 'iconBackAddUser' 
-                            type = 'arrow-left'
-                        />
+                        <Link to = { '/' } >
+                            <Icon
+                                className = 'iconBackAddUser' 
+                                type = 'arrow-left'
+                            /> 
+                        </Link> 
                         <div className = 'textAddUser'>
                             Adicionar Funcionário
                         </div>
