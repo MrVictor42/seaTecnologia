@@ -277,7 +277,7 @@ class UserCreate extends Component {
                                 </Button>
                             </Upload>
                         </div>
-                        <Button className = 'buttonSave'>
+                        <Button className = 'buttonSave' htmlType = 'submit'>
                             Salvar
                         </Button> 
                     </div>

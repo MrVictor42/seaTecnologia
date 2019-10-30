@@ -385,6 +385,285 @@
     border-radius: 10px;
 }
 
+.contentUpIcon {
+
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 29px;
+    top: 25px;
+    background: #4FA1C1;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.textContentUpFirst {
+
+    position: absolute;
+    top: 111px;
+    left: 48px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #4FA1C1;
+}
+
+.textContentUpSecond {
+
+    position: absolute;
+    top: 111px;
+    left: 186px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #4FA1C1;
+}
+
+.textContentUpThird {
+
+    position: absolute;
+    top: 111px;
+    left: 325px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #4FA1C1;
+}
+
+.textContentUpFourth {
+
+    position: absolute;
+    top: 111px;
+    left: 467px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #4FA1C1;
+}
+
+.textContentUpFiveth {
+
+    position: absolute;
+    top: 111px;
+    left: 608px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #4FA1C1;
+}
+
+.textContentUpSixth {
+
+    position: absolute;
+    top: 111px;
+    left: 747px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #4FA1C1;
+}
+
+.textContentUpSeventh {
+
+    position: absolute;
+    top: 111px;
+    left: 886px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #4FA1C1;
+}
+
+.textContentUpEighth {
+
+    position: absolute;
+    top: 111px;
+    left: 1026px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #4FA1C1;
+}
+
+.textContentUpNineth {
+
+    position: absolute;
+    top: 111px;
+    left: 1167px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #4FA1C1;
+}
+
+.contentUpIconImageFirst {
+
+    position: absolute;
+    left: 29px;
+    top: 25px;
+}
+
+.contentUpIconImageSecond {
+
+    position: absolute;
+    left: 168px;
+    top: 25px;
+}
+
+.contentUpIconImageThird {
+
+    position: absolute;
+    left: 308px;
+    top: 25px;
+}
+
+.contentUpIconImageFourth {
+
+    position: absolute;
+    left: 448px;
+    top: 25px;
+}
+
+.contentUpIconImageFiveth {
+
+    position: absolute;
+    left: 588px;
+    top: 25px;
+}
+
+.contentUpIconImageSixth {
+
+    position: absolute;
+    left: 728px;
+    top: 25px;
+}
+
+.contentUpIconImageSeventh {
+
+    position: absolute;
+    left: 868px;
+    top: 25px;
+}
+
+.contentUpIconImageEighth {
+
+    position: absolute;
+    left: 1008px;
+    top: 25px;
+}
+
+.contentUpIconImageNineth {
+
+    position: absolute;
+    left: 1148px;
+    top: 25px;
+}
+
+.iconContentUpFirst {
+
+    position: absolute;
+    top: 41px;
+    left: 53px;
+}
+
+.iconContentUpSecond {
+
+    position: absolute;
+    top: 41px;
+    left: 192px;
+}
+
+.iconContentUpThird {
+
+    position: absolute;
+    top: 41px;
+    left: 332px;
+}
+
+.iconContentUpFourth {
+
+    position: absolute;
+    top: 41px;
+    left: 472px;
+}
+
+.iconContentUpFiveth {
+
+    position: absolute;
+    top: 41px;
+    left: 612px;
+}
+
+.iconContentUpSixth {
+
+    position: absolute;
+    top: 41px;
+    left: 752px;
+}
+
+.iconContentUpSeventh {
+
+    position: absolute;
+    top: 41px;
+    left: 892px;
+}
+
+.iconContentUpEighth {
+
+    position: absolute;
+    top: 41px;
+    left: 1032px;
+}
+
+.iconContentUpNineth {
+
+    position: absolute;
+    top: 41px;
+    left: 1172px;
+}
+
+.usersActives1 {
+
+    position: absolute;
+    width: 734px;
+    height: 84px;
+    left: 16px;
+    top: 319px;
+
+    background: #EDF1F5;
+    opacity: 0.85;
+    border-radius: 10px;
+}
+
 .nameUsersActives {
 
     position: absolute;

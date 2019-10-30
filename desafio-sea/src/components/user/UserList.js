@@ -1,12 +1,29 @@
 import React, { Component } from 'react';
 import { Button, Switch, Layout } from 'antd';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const { Content } = Layout;
 
 class UserList extends Component {
 
+    state = {
+        persons: [
+
+        ]
+    };
+
+    componentDidMount() {
+        axios.get('http://localhost:3001/users')
+          .then(res => {
+            const persons = res.data;
+            this.setState({ persons });
+        });
+    }
+
     render() {
+
+        const actives = this.state.persons.length;
         return (
             <Content className = 'userList'>
                 <div className = 'userListTop' >
@@ -33,8 +50,9 @@ class UserList extends Component {
                     >
                         Limpar Filtros
                     </Button>
+                    {/* { this.state.persons.map(person => <li>{person.name}</li>)} */}
                     <div className = 'actives'>
-                        Ativos 2/15
+                        Ativos { actives }/15
                     </div>
                     <div className = 'usersActives'>
                         <div className = 'nameUsersActives'>
@@ -63,6 +81,54 @@ class UserList extends Component {
                             >
                                 ...
                             </Button>
+                        </div>
+                    </div>
+                    <div className = 'usersActives1'>
+                        <div className = 'nameUsersActives'>
+                            Giselle Torres Lopes
+                            <Button
+                                type = 'primary'
+                                className = 'cpfUser'    
+                            >
+                                000.000.000-99
+                            </Button>
+                            <Button
+                                type = 'primary'
+                                className = 'activeNumber'    
+                            >
+                                Act 00
+                            </Button>
+                            <Button
+                                type = 'primary'
+                                className = 'officeUser'    
+                            >
+                                Cargo 01
+                            </Button>
+                            <Button
+                                type = 'primary'
+                                className = 'optionsUser'    
+                            >
+                                ...
+                            </Button>
+                            {/* 
+                            <Button
+                                type = 'primary'
+                                className = 'activeNumber1'    
+                            >
+                                Act 00
+                            </Button>
+                            <Button
+                                type = 'primary'
+                                className = 'officeUser1'    
+                            >
+                                Cargo 01
+                            </Button>
+                            <Button
+                                type = 'primary'
+                                className = 'optionsUser1'    
+                            >
+                                ...
+                            </Button> */}
                         </div>
                     </div>
                     <div className = 'switchText'>

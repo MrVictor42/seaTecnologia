@@ -8,7 +8,6 @@ import retangule from '../svgs/retangule.svg';
 import miniRetangule from '../svgs/miniRetangule.svg';
 import miniminiRetangule from '../svgs/miniminiRetangule.svg';
 import userIcon from '../svgs/userIcon.svg';
-import UserList from '../user/UserList';
 import ContentLeft from '../content/ContentLeft';
 import ContentUp from '../content/ContentUp';
 
