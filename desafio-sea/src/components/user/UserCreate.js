@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Icon, Switch, Form, Input, Button, Radio, Select, Upload, Checkbox } from 'antd';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
 
 import { createUser } from '../../store/actions/user';
 
@@ -9,30 +10,61 @@ const { Option } = Select;
 
 class UserCreate extends Component {
 
-    handleSubmit = e => {
-        
-        e.preventDefault();
-        this.props.form.validateFieldsAndScroll((err, values) => {
-            if (!err) {
-                console.log('Received values of form: ', values);
-            }
-        });
-    };
+    state = {
+		confirmDirty: false,
+	};
+
+	handleSubmit = e => {
+		
+		e.preventDefault();
+		
+		this.props.form.validateFieldsAndScroll((err, values) => {
+
+			if (!err) {
+                
+                let choice_switch = '';
+
+                if(values.switch === undefined || values.switch === false) {
+                    choice_switch = 'inativo';
+                } else {
+                    choice_switch = 'ativo'
+                }
+                
+                const user = {
+                    name: values.name,
+                    ativo: choice_switch,
+                    aniversario: values.birth,
+                    cpf: values.cpf,
+                    numeroCa: values.numberCa,
+                    rg: values.rg,
+                    cargo: values.office,
+                    selectEpi: values.selectEpi,
+                    sexo: values.sex,
+                    atividade: values.activity
+                }
+
+                this.props.createUser(user);
+				this.props.history.push('/');			
+			
+			} else {
+
+			}	
+		});
+	};
 
     render() {
 
         const { getFieldDecorator } = this.props.form;
         return(
             <Content className = 'contentAddUser'>
-                <Form onSubmit = { this.handleSubmit }>
-                    
-                    <div className = 'userAddTop'>
+                <Form onSubmit = { this.handleSubmit } >
+				<div className = 'userAddTop'>
                         <Link to = { '/' } >
                             <Icon
                                 className = 'iconBackAddUser' 
                                 type = 'arrow-left'
                             /> 
-                        </Link> 
+                        </Link>
                         <div className = 'textAddUser'>
                             Adicionar Funcionário
                         </div>
@@ -58,18 +90,11 @@ class UserCreate extends Component {
                             <Form.Item className = 'fieldName'>
                                 {
                                     getFieldDecorator('name', {
-                                        rules: [
-                                        {
-                                            type: 'text',
-                                            message: 'Coloque o seu nome!',
-                                        },
-                                        {
+                                        rules: [{
                                             required: true,
-                                            message: 'Coloque o seu nome!',
-                                        },
-                                        ],
+                                        }]
                                     })(
-                                        <Input />
+                                        <Input placeholder = 'Nome Completo' />
                                     )
                                 }
                             </Form.Item>
@@ -79,18 +104,11 @@ class UserCreate extends Component {
                             <Form.Item className = 'fieldcpf'>
                                 {
                                     getFieldDecorator('cpf', {
-                                        rules: [
-                                        {
-                                            type: 'text',
-                                            message: 'Coloque o seu CPF!',
-                                        },
-                                        {
+                                        rules: [{
                                             required: true,
-                                            message: 'Coloque o seu CPF!',
-                                        },
-                                        ],
+                                        }]
                                     })(
-                                        <Input />
+                                        <Input placeholder = 'Informe o CPF'/>
                                     )
                                 }
                             </Form.Item>
@@ -100,18 +118,11 @@ class UserCreate extends Component {
                             <Form.Item className = 'fieldRg'>
                                 {
                                     getFieldDecorator('rg', {
-                                        rules: [
-                                        {
-                                            type: 'text',
-                                            message: 'Coloque o seu RG!',
-                                        },
-                                        {
+                                        rules: [{
                                             required: true,
-                                            message: 'Coloque o seu RG!',
-                                        },
-                                        ],
+                                        }]
                                     })(
-                                        <Input />
+                                        <Input placeholder = 'Informe seu RG'/>
                                     )
                                 }
                             </Form.Item>
@@ -120,7 +131,7 @@ class UserCreate extends Component {
                             </div>
                             <Form.Item className ='fieldSex'>
                                 {
-                                    getFieldDecorator('radio-group')(
+                                    getFieldDecorator('sex')(
                                         <Radio.Group>
                                             <Radio value = 'masculino'> Masculino </Radio>
                                             <Radio value = 'feminino'> Feminino </Radio>
@@ -134,18 +145,11 @@ class UserCreate extends Component {
                             <Form.Item className = 'fieldBirth'>
                                 {
                                     getFieldDecorator('birth', {
-                                        rules: [
-                                        {
-                                            type: 'date',
-                                            message: 'Coloque a Data de Nascimento!',
-                                        },
-                                        {
+                                        rules: [{
                                             required: true,
-                                            message: 'Coloque a Data de Nascimento!',
-                                        },
-                                        ],
+                                        }]
                                     })(
-                                        <Input />
+                                        <Input placeholder = 'Informe Sua Data de Nascimento'/>
                                     )
                                 }
                             </Form.Item>
@@ -155,16 +159,7 @@ class UserCreate extends Component {
                             <Form.Item className = 'fieldOffice'>
                                 {
                                     getFieldDecorator('office', {
-                                        rules: [
-                                        {
-                                            type: 'date',
-                                            message: 'Coloque a Data de Nascimento!',
-                                        },
-                                        {
-                                            required: true,
-                                            message: 'Coloque a Data de Nascimento!',
-                                        },
-                                        ],
+                                        initialValue: ''
                                     })(
                                         <Select defaultValue = '1'>
                                             <Option value = ''> </Option>
@@ -191,16 +186,7 @@ class UserCreate extends Component {
                                     <Form.Item className = 'fieldSelect'>
                                         {
                                             getFieldDecorator('activity', {
-                                                rules: [
-                                                {
-                                                    type: 'text',
-                                                    message: 'Selecione a Atividade!',
-                                                },
-                                                {
-                                                    required: true,
-                                                    message: 'Selecione a Atividade!',
-                                                },
-                                                ],
+                                                initialValue: ''
                                             })(
                                                 <Select defaultValue = '1'>
                                                     <Option value = ''> </Option>
@@ -216,21 +202,12 @@ class UserCreate extends Component {
                                     <Form.Item className = 'fieldSelectEPI'>
                                         {
                                             getFieldDecorator('selectEpi', {
-                                                rules: [
-                                                {
-                                                    type: 'text',
-                                                    message: 'Selecione o EPI!',
-                                                },
-                                                {
-                                                    required: true,
-                                                    message: 'Selecione o EPI!',
-                                                },
-                                                ],
+                                                initialValue: ''
                                             })(
                                                 <Select defaultValue = '1'>
                                                     <Option value = ''> </Option>
-                                                    <Option value = 'cargo1'> TO CERTO</Option>
-                                                    <Option value = 'cargo2'> Cargo 2 </Option>
+                                                    <Option value = 'epi1'> EPI 1</Option>
+                                                    <Option value = 'epi2'> EPI 2 </Option>
                                                 </Select>
                                             )
                                         }
@@ -241,18 +218,11 @@ class UserCreate extends Component {
                                     <Form.Item className = 'fieldSelectEPI'>
                                         {
                                             getFieldDecorator('numberCa', {
-                                                rules: [
-                                                {
-                                                    type: 'text',
-                                                    message: 'Informe o Número do CA!',
-                                                },
-                                                {
+                                                rules: [{
                                                     required: true,
-                                                    message: 'Informe o Número do CA!',
-                                                },
-                                                ],
+                                                }]
                                             })(
-                                                <Input />
+                                                <Input placeholder = 'Informe o Número CA'/>
                                             )
                                         }
                                     </Form.Item>
@@ -264,6 +234,7 @@ class UserCreate extends Component {
                             <Button className = 'buttonAddActivity'>
                                 Adicionar outra atividade
                             </Button>
+                            
                         </div>
                         <div className = 'fieldsDatas3'>
                             <div className = 'textFile'>
@@ -280,9 +251,9 @@ class UserCreate extends Component {
                         </div>
                         <Button className = 'buttonSave' htmlType = 'submit'>
                             Salvar
-                        </Button> 
+                        </Button>
                     </div>
-                </Form>
+			    </Form>
             </Content>
         );
     }
@@ -290,4 +261,11 @@ class UserCreate extends Component {
 
 const UserCreateForm = Form.create()(UserCreate);
 
-export default UserCreateForm;
+const mapDispatchToProps = dispatch => {
+
+	return {
+		createUser: (user) => dispatch(createUser(user))
+	};
+}
+
+export default connect(mapDispatchToProps)(UserCreateForm);
