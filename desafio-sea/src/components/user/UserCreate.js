@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Layout, Icon, Switch, Form, Input, Button, Radio, Select, Upload, Checkbox } from 'antd';
 import { Link } from 'react-router-dom';
 
+import { createUser } from '../../store/actions/user';
+
 const { Content } = Layout;
 const { Option } = Select;
 
@@ -16,10 +18,6 @@ class UserCreate extends Component {
             }
         });
     };
-
-    onChange(e) {
-        console.log(`checked = ${e.target.checked}`);
-    }
 
     render() {
 

@@ -21,7 +21,6 @@ class CustomLayout extends Component {
 					width = '57px'
 				>
 					<Menu className = 'iconMenuUp'>
-		
 						<img src = { retangule } className = 'retanguleIconFirst' alt = '' />
 						<Icon type = 'bank' className = 'iconMenuFirst'/>
 						<img src = { retangule } className = 'retanguleIconSecond' alt = ''/>
