@@ -7,11 +7,24 @@ import miniRetangule from '../svgs/miniRetangule.svg';
 import miniminiRetangule from '../svgs/miniminiRetangule.svg';
 import userIcon from '../svgs/userIcon.svg';
 import ContentLeft from '../content/ContentLeft';
-import ContentUp from '../content/ContentUp';
 
 const { Content, Sider } = Layout;
 
 class CustomLayout extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			concluido: false
+		};
+		this.updateState = this.updateState.bind(this);
+	}
+
+	updateState() {
+		this.setState({
+			concluido: !this.state.concluido
+		});
+	}
 
 	render() {
 		return (
@@ -39,9 +52,6 @@ class CustomLayout extends Component {
 					</Menu>
 				</Sider>
 				<Layout>
-					<Content className = 'contentUp'>
-						<ContentUp />
-					</Content>
 
 					<Content className = 'contentLeft'>
 						<ContentLeft/>

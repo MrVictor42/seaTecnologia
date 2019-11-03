@@ -413,6 +413,20 @@
     color: #4FA1C1;
 }
 
+.textDoneUpFirst {
+
+    position: absolute;
+    top: 128px;
+    left: 30px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #4FA1C1;
+}
+
 .textContentUpSecond {
 
     position: absolute;

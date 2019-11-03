@@ -5,11 +5,21 @@ import iconContentUp from '../svgs/iconContentUp.svg';
 class ContentUp extends Component {
 
     render() {
+        let value = '';
+
+        if(this.props.status === false) {
+            value = '';
+        } else {
+            value = 'CONCLUIDO'
+        }
+
         return (
             <div>
                 <img src = { contentUp } className = 'contentUpIconImageFirst'  alt = '' />
                 <img src = { iconContentUp } className = 'iconContentUpFirst'  alt = '' />
                 <p className = 'textContentUpFirst'> ITEM 1 </p>
+                <p className = 'textDoneUpFirst'> { value } </p>
+
                 <img src = { contentUp } className = 'contentUpIconImageSecond'  alt = '' />
                 <img src = { iconContentUp } className = 'iconContentUpSecond'  alt = '' />
                 <p className = 'textContentUpSecond'> ITEM 1 </p>
