@@ -71,10 +71,14 @@ export const getUsers = () => {
 
 export const createUser = (user) => {
 
-    return dispatch => {
-    
+    console.log(user)
+
+    return dispatch => {    
         dispatch(createUserStart());
-        axios.post('http://localhost:3001/users/', user)
+        axios.defaults.headers = {
+            'Content-Type': 'application/json',
+        };
+        axios.post('http://localhost:3001/users', user)
         .then(res => {
             dispatch(createUserSuccess(res));
         })

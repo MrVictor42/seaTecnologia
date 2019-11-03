@@ -1,18 +1,25 @@
 {
   "users": [
-      {
-          "id": "1",
-          "name": "Daniel Alves da Silva",
-          "cpf": "000.000.000-99",
-          "atividade": "Ativ 00",
-          "cargo": "Cargo 1"
-      },
-      {
-          "id": "2",
-          "name": "Giselle Tores Lopes",
-          "cpf": "000.000.000-88",
-          "atividade": "Ativ 00",
-          "cargo": "Cargo 2"
-      }
+    {
+      "id": "1",
+      "name": "Daniel Alves da Silva",
+      "cpf": "000.000.000-99",
+      "atividade": "Ativ 00",
+      "cargo": "Cargo 1"
+    },
+    {
+      "id": "2",
+      "name": "Giselle Tores Lopes",
+      "cpf": "000.000.000-88",
+      "atividade": "Ativ 00",
+      "cargo": "Cargo 2"
+    },
+    {
+      "name": "victor",
+      "cpf": "000.000.000-00",
+      "atividade": "comandante",
+      "cargo": "piloto",
+      "id": "GI2SgNs"
+    }
   ]
 }

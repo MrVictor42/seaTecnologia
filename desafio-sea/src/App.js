@@ -10,7 +10,7 @@ class App extends Component {
   	render() {
     	return (
 			<Router>
-				<Layout {...this.props}>
+				<Layout {...this.props} >
 					<BaseRouter />
 				</Layout>
 			</Router>

@@ -23,24 +23,10 @@ class UserCreate extends Component {
 
 			if (!err) {
                 
-                let choice_switch = '';
-
-                if(values.switch === undefined || values.switch === false) {
-                    choice_switch = 'inativo';
-                } else {
-                    choice_switch = 'ativo'
-                }
-                
                 const user = {
                     name: values.name,
-                    ativo: choice_switch,
-                    aniversario: values.birth,
                     cpf: values.cpf,
-                    numeroCa: values.numberCa,
-                    rg: values.rg,
                     cargo: values.office,
-                    selectEpi: values.selectEpi,
-                    sexo: values.sex,
                     atividade: values.activity
                 }
 
@@ -82,8 +68,9 @@ class UserCreate extends Component {
                                         getFieldDecorator('switch', { 
                                             valuePropName: 'checked' 
                                         })(
-                                            <Switch checkedChildren = 'Ativo' 
-                                                    unCheckedChildren = 'Inativo'/>
+                                            <Switch 
+                                                checkedChildren = 'Ativo' 
+                                                unCheckedChildren = 'Inativo'/>
                                         )
                                     }
                                 </Form.Item>
@@ -99,7 +86,7 @@ class UserCreate extends Component {
                                                 required: true,
                                             }]
                                         })(
-                                            <Input placeholder = 'Nome Completo' />
+                                            <Input />
                                         )
                                     }
                                 </Form.Item>
@@ -113,7 +100,7 @@ class UserCreate extends Component {
                                                 required: true,
                                             }]
                                         })(
-                                            <Input placeholder = 'Informe o CPF'/>
+                                            <Input />
                                         )
                                     }
                                 </Form.Item>
@@ -127,7 +114,7 @@ class UserCreate extends Component {
                                                 required: true,
                                             }]
                                         })(
-                                            <Input placeholder = 'Informe seu RG'/>
+                                            <Input />
                                         )
                                     }
                                 </Form.Item>
@@ -154,7 +141,7 @@ class UserCreate extends Component {
                                                 required: true,
                                             }]
                                         })(
-                                            <Input placeholder = 'Informe Sua Data de Nascimento'/>
+                                            <Input />
                                         )
                                     }
                                 </Form.Item>
@@ -227,7 +214,7 @@ class UserCreate extends Component {
                                                         required: true,
                                                     }]
                                                 })(
-                                                    <Input placeholder = 'Informe o Número CA'/>
+                                                    <Input />
                                                 )
                                             }
                                         </Form.Item>
