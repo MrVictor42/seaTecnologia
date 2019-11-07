@@ -7,6 +7,7 @@ import miniRetangule from '../svgs/miniRetangule.svg';
 import miniminiRetangule from '../svgs/miniminiRetangule.svg';
 import userIcon from '../svgs/userIcon.svg';
 import ContentLeft from '../content/ContentLeft';
+import ContentUp from '../content/ContentUp';
 
 const { Content, Sider } = Layout;
 
@@ -56,6 +57,9 @@ class CustomLayout extends Component {
 					<Content className = 'contentLeft'>
 						<ContentLeft/>
 						<img src = { userIcon } className = 'logo' alt = ''/>
+					</Content>
+					<Content className = 'contentUp'>
+						<ContentUp />
 					</Content>
 
 					{ this.props.children }

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 
 import { createUser } from '../../store/actions/user';
-import ContentUp from '../content/ContentUp';
 
 const { Content } = Layout;
 const { Option } = Select;
@@ -44,9 +43,7 @@ class UserCreate extends Component {
         const { getFieldDecorator } = this.props.form;
         return(
             <div>
-                <Content className = 'contentUp'>
-                    <ContentUp />
-                </Content>
+                
                 <Content className = 'contentAddUser'>
                 <Form onSubmit = { this.handleSubmit } >
                     <div className = 'userAddTop'>
